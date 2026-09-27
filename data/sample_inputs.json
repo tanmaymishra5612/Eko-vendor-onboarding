@@ -1,0 +1,41 @@
+[
+  {
+    "id": "VEND-001",
+    "businessName": "Rewa Fresh Mart",
+    "contactName": "Anita Sharma",
+    "contactPhone": "+919812345678",
+    "contactEmail": "anita@reshfreshmart.example",
+    "serviceCategory": "grocery",
+    "address": "MG Road, Rewa, MP",
+    "businessRegistrationNumber": "23ABCDE1234F1Z5",
+    "bankAccountNumber": "123456789012",
+    "documentsUploaded": ["gst_certificate.pdf", "shop_license.pdf"],
+    "claimedMonthlyVolume": 45000
+  },
+  {
+    "id": "VEND-002",
+    "businessName": "Quickfix Electronics",
+    "contactName": "Rahul Verma",
+    "contactPhone": "9800011122",
+    "contactEmail": "rahul.verma@quickfix.example",
+    "serviceCategory": "electronics repair",
+    "address": "",
+    "businessRegistrationNumber": "",
+    "bankAccountNumber": "44112233",
+    "documentsUploaded": []
+  },
+  {
+    "id": "VEND-003",
+    "businessName": "MediCare Pharma Distributors",
+    "contactName": "Sunita Rao",
+    "contactPhone": "+919911223344",
+    "contactEmail": "sunita@medicarepharma.example",
+    "serviceCategory": "pharmaceutical distribution",
+    "address": "Sector 5, Bhopal, MP",
+    "businessRegistrationNumber": "23XYZAB5678K2L1",
+    "bankAccountNumber": "9988776655",
+    "documentsUploaded": [],
+    "claimedMonthlyVolume": 250000
+  },
+  null
+]

@@ -1,0 +1,164 @@
+[
+  {
+    "input": {
+      "id": "VEND-001",
+      "businessName": "Rewa Fresh Mart",
+      "contactName": "Anita Sharma",
+      "contactPhone": "+919812345678",
+      "contactEmail": "anita@reshfreshmart.example",
+      "serviceCategory": "grocery",
+      "address": "MG Road, Rewa, MP",
+      "businessRegistrationNumber": "23ABCDE1234F1Z5",
+      "bankAccountNumber": "123456789012",
+      "documentsUploaded": [
+        "gst_certificate.pdf",
+        "shop_license.pdf"
+      ],
+      "claimedMonthlyVolume": 45000
+    },
+    "result": {
+      "decision": "AUTO_APPROVED",
+      "validation": {
+        "isComplete": true,
+        "missing": [],
+        "malformed": [],
+        "hasIssues": false
+      },
+      "risk": {
+        "score": 0,
+        "band": "low",
+        "reasons": []
+      },
+      "summary": "Submission from \"Rewa Fresh Mart\". Risk score 0/100 (low). Decision: AUTO_APPROVED.",
+      "summarySource": "template",
+      "summaryFailureReason": "no API key configured",
+      "escalationReason": null,
+      "states": [
+        "RECEIVED",
+        "VALIDATED",
+        "RISK_SCORED",
+        "DECIDED:AUTO_APPROVED",
+        "SUMMARIZED:FALLBACK",
+        "LOGGED"
+      ]
+    }
+  },
+  {
+    "input": {
+      "id": "VEND-002",
+      "businessName": "Quickfix Electronics",
+      "contactName": "Rahul Verma",
+      "contactPhone": "9800011122",
+      "contactEmail": "rahul.verma@quickfix.example",
+      "serviceCategory": "electronics repair",
+      "address": "",
+      "businessRegistrationNumber": "",
+      "bankAccountNumber": "44112233",
+      "documentsUploaded": []
+    },
+    "result": {
+      "decision": "PENDING_INFO",
+      "validation": {
+        "isComplete": false,
+        "missing": [
+          "address",
+          "businessRegistrationNumber"
+        ],
+        "malformed": [],
+        "hasIssues": true
+      },
+      "risk": {
+        "score": 50,
+        "band": "high",
+        "reasons": [
+          "2 required field(s) missing",
+          "no supporting documents uploaded"
+        ]
+      },
+      "summary": "Submission from \"Quickfix Electronics\". Missing: address, businessRegistrationNumber. Risk score 50/100 (high). Reasons: 2 required field(s) missing; no supporting documents uploaded. Decision: PENDING_INFO.",
+      "summarySource": "template",
+      "summaryFailureReason": "no API key configured",
+      "escalationReason": "missing or malformed required fields",
+      "states": [
+        "RECEIVED",
+        "VALIDATED",
+        "RISK_SCORED",
+        "DECIDED:PENDING_INFO",
+        "SUMMARIZED:FALLBACK",
+        "LOGGED"
+      ]
+    }
+  },
+  {
+    "input": {
+      "id": "VEND-003",
+      "businessName": "MediCare Pharma Distributors",
+      "contactName": "Sunita Rao",
+      "contactPhone": "+919911223344",
+      "contactEmail": "sunita@medicarepharma.example",
+      "serviceCategory": "pharmaceutical distribution",
+      "address": "Sector 5, Bhopal, MP",
+      "businessRegistrationNumber": "23XYZAB5678K2L1",
+      "bankAccountNumber": "9988776655",
+      "documentsUploaded": [],
+      "claimedMonthlyVolume": 250000
+    },
+    "result": {
+      "decision": "ESCALATED",
+      "validation": {
+        "isComplete": true,
+        "missing": [],
+        "malformed": [],
+        "hasIssues": false
+      },
+      "risk": {
+        "score": 45,
+        "band": "medium",
+        "reasons": [
+          "no supporting documents uploaded",
+          "regulated service category requires extra scrutiny",
+          "unusually high claimed monthly volume for a new partner"
+        ]
+      },
+      "summary": "Submission from \"MediCare Pharma Distributors\". Risk score 45/100 (medium). Reasons: no supporting documents uploaded; regulated service category requires extra scrutiny; unusually high claimed monthly volume for a new partner. Decision: ESCALATED.",
+      "summarySource": "template",
+      "summaryFailureReason": "no API key configured",
+      "escalationReason": "no supporting documents uploaded; regulated service category requires extra scrutiny; unusually high claimed monthly volume for a new partner",
+      "states": [
+        "RECEIVED",
+        "VALIDATED",
+        "RISK_SCORED",
+        "DECIDED:ESCALATED",
+        "SUMMARIZED:FALLBACK",
+        "LOGGED"
+      ]
+    }
+  },
+  {
+    "input": null,
+    "result": {
+      "decision": "ESCALATED",
+      "escalationReason": "submission payload missing or unreadable",
+      "validation": {
+        "isComplete": false,
+        "missing": [
+          "<entire payload>"
+        ],
+        "malformed": []
+      },
+      "risk": {
+        "score": 100,
+        "band": "high",
+        "reasons": [
+          "unreadable input"
+        ]
+      },
+      "summary": "Submission could not be read. Escalated to a human reviewer without further processing.",
+      "summarySource": "system",
+      "states": [
+        "RECEIVED",
+        "ESCALATED"
+      ]
+    }
+  }
+]

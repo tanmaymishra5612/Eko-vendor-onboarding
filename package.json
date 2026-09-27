@@ -1,0 +1,13 @@
+{
+  "name": "eko-partner-onboarding-worker",
+  "version": "1.0.0",
+  "description": "Partner/Vendor Onboarding AI Worker — validates, risk-scores, and routes vendor onboarding submissions, escalating incomplete or risky cases to a human reviewer.",
+  "main": "src/index.js",
+  "scripts": {
+    "start": "node src/index.js",
+    "demo": "node demo.js"
+  },
+  "dependencies": {
+    "express": "^4.19.2"
+  }
+}
