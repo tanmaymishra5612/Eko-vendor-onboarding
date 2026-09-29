@@ -2,13 +2,13 @@
 
 A bounded AI Worker that takes a vendor onboarding submission, validates it,
 scores its risk, decides how to route it, writes a privacy-safe audit log,
-and produces a short human-readable summary — escalating anything incomplete
+and produces a short human-readable summary escalating anything incomplete
 or risky to a human instead of guessing.
 
 Inspired directly by backend onboarding/validation work on PaPaPet (a
-booking/service platform), where this exact shape of problem — "is this
+booking/service platform), where this exact shape of problem "is this
 submission good enough to move forward automatically, or does a person need
-to look at it?" — comes up constantly.
+to look at it?" comes up constantly.
 
 ## Goal
 Cut the time an operations reviewer spends on **every** vendor submission by
